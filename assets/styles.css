@@ -536,3 +536,62 @@ footer .wrap {
 .identity .supervisor {
   margin-top:18px;
 }
+
+/* Responsive navigation */
+.nav-toggle {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.nav-toggle span {
+  width: 22px;
+  height: 2px;
+  background: currentColor;
+}
+.nav-toggle:focus-visible {
+  outline: 3px solid var(--teal);
+  outline-offset: 4px;
+}
+.nav-toggle[hidden], .links[hidden] {
+  display: none;
+}
+@media (max-width: 768px) {
+  nav {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 18px 0;
+  }
+  .brand {
+    flex: 1;
+    min-width: 0;
+    font-size: 18px;
+  }
+  .brand span {
+    display: block;
+    font-size: 14px;
+  }
+  .links {
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+  }
+  .links a {
+    padding: 12px 0;
+    font-size: 16px;
+  }
+}
