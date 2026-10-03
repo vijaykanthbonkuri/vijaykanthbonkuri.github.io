@@ -155,7 +155,7 @@ h1 em {
 
 .identity .label {
   color: var(--aqua);
-  font-size: clamp(36px, 3.5vw, 40px);
+  font-size: min(40px, 7vw);
   font-weight: 800;
   line-height: 1.12;
   letter-spacing: -0.8px;
@@ -164,6 +164,7 @@ h1 em {
   padding-left: 16px;
   border-left: 4px solid var(--aqua);
   overflow-wrap: normal;
+  white-space: nowrap;
 }
 
 .field-strip {
@@ -593,5 +594,29 @@ footer .wrap {
   .links a {
     padding: 12px 0;
     font-size: 16px;
+  }
+}
+
+/* Keep name sizing relative to its available profile width. */
+.identity {
+  min-width: 0;
+  container-type: inline-size;
+}
+@supports (font-size: 1cqw) {
+  .identity .label {
+    font-size: min(40px, 8.5cqw);
+  }
+}
+/* CSS controls toggle visibility even before JavaScript initializes. */
+.nav-toggle {
+  display: none;
+  flex-shrink: 0;
+}
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: inline-flex;
+  }
+  nav.nav-enhanced .links:not(.is-open) {
+    display: none;
   }
 }
