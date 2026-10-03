@@ -155,7 +155,7 @@ h1 em {
 
 .identity .label {
   color: var(--aqua);
-  font-size: clamp(32px, 3.5vw, 44px);
+  font-size: clamp(36px, 3.5vw, 40px);
   font-weight: 800;
   line-height: 1.12;
   letter-spacing: -0.8px;
