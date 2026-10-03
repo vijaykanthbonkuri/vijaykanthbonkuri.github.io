@@ -154,13 +154,16 @@ h1 em {
 }
 
 .identity .label {
-  font-weight: 700;
-  line-height: 1.25;
-  color:var(--aqua);
-  font-size:clamp(24px, 2.5vw, 32px);
-  text-transform:none;
-  letter-spacing:.5px;
-  margin-bottom:14px;
+  color: var(--aqua);
+  font-size: clamp(32px, 3.5vw, 44px);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.8px;
+  text-transform: none;
+  margin-bottom: 24px;
+  padding-left: 16px;
+  border-left: 4px solid var(--aqua);
+  overflow-wrap: normal;
 }
 
 .field-strip {
